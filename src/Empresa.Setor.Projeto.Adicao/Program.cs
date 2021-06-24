@@ -24,15 +24,23 @@ namespace Empresa.Setor.Projeto.Adicao
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Numero 1 nao foi possivel ser convertido para inteiro");
+                Console.WriteLine("Primeiro dígito não foi possível ser convertido para inteiro");
             }
 
             //testar conversao do numero 2
 
+            try
+            {
+                Convert.ToInt32(numero2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Segundo dígito não foi possível ser convertido para inteiro");
+            }
 
             //exibir mensagem da operacao de adicao
 
-
+            Console.WriteLine("A soma dos números digitados é: " + (Convert.ToInt32(numero1) + Convert.ToInt32(numero2)));
 
             Console.ReadKey();
         }
